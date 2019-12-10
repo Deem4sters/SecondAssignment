@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:rowCount="2"
+    android:columnCount="3">
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area of Circle"/>
+
+    <Button
+        android:id="@+id/btnPalindrome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palindrome"/>
+
+    <Button
+        android:id="@+id/btnSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple Interest"/>
+
+    <Button
+        android:id="@+id/btnArmstrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arm Strong"/>
+
+    <Button
+        android:id="@+id/btnAutomorphic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AutoMorphic"/>
+
+    <Button
+        android:id="@+id/btnSwapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swapping" />
+    </GridLayout>
+    <LinearLayout
+        android:id="@+id/FragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+
+</LinearLayout>
