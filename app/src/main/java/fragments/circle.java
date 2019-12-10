@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,10 +40,14 @@ public class circle extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+        if (TextUtils.isEmpty(etRadius.getText())) {
+            etRadius.setError("Enter Armstrong Number");
+            return;
+        }
         float radius= Float.parseFloat(etRadius.getText().toString());
         float area = 3.14f * radius * radius;
 
-        resultArea.setText("Area of circle is" + area);
+        resultArea.setText("Area of circle is " + area);
 
     }
 }

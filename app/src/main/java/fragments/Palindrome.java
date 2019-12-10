@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,10 @@ public class Palindrome extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
+        if (TextUtils.isEmpty(etNum.getText())) {
+            etNum.setError("Enter Armstrong Number");
+            return;
+        }
         int reversedInteger=0, remainder,originalInteger;
         int num=Integer.parseInt(etNum.getText().toString());
         originalInteger = num;

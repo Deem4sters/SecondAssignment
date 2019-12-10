@@ -41,6 +41,7 @@ public class SimpleInterest extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+
         float principle= Float.parseFloat(etPrinciple.getText().toString());
         float time = Float.parseFloat(etTime.getText().toString());
         float rate= Float.parseFloat(etRate.getText().toString());

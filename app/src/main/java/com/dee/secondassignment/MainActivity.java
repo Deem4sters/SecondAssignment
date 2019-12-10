@@ -13,6 +13,7 @@ import fragments.ArmStrong;
 import fragments.Automorphic;
 import fragments.Palindrome;
 import fragments.SimpleInterest;
+import fragments.Swapping;
 import fragments.circle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -75,6 +76,12 @@ private Button btnCircle, btnPalindrome,btnSI,btnArmstrong,btnAutomorphic,btnSwa
             case R.id.btnAutomorphic:
                 Automorphic automorphic = new Automorphic();
                 fragmentTransaction.replace(R.id.FragmentContainer,automorphic);
+                fragmentTransaction.commit();
+                break;
+
+            case R.id.btnSwapping:
+                Swapping swapping = new Swapping();
+                fragmentTransaction.replace(R.id.FragmentContainer,swapping);
                 fragmentTransaction.commit();
                 break;
 

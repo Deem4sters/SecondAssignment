@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ public class Automorphic extends Fragment implements View.OnClickListener {
         btnShow = view.findViewById(R.id.btnShow);
         resultArea = view.findViewById(R.id.resultArea);
 
-        resultArea.setOnClickListener(this);
+        btnShow.setOnClickListener(this);
 
         return view;
 
@@ -39,7 +40,26 @@ public class Automorphic extends Fragment implements View.OnClickListener {
 
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View view) {
+        if (TextUtils.isEmpty(etNum.getText())) {
+            etNum.setError("Enter Armstrong Number");
+            return;
+        }
+        int num = Integer.parseInt(etNum.getText().toString());
 
+        int d=1; int i;
+        for(i=num;i>0;i=i/10){
+            d=d*10;
     }
+
+            if((num*num)%d==num)
+            {
+                resultArea.setText(num + "\t" + " is Automorphic");
+            }
+             else {
+                resultArea.setText(num + "\t" + " is Not Automorphic");
+
+            }
+
+        }
 }
