@@ -15,7 +15,8 @@
         android:id="@+id/btnArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Calculate"/>
+        android:textColor="@color/colorAccent"
+        android:text="Calculate"/>
     <TextView
         android:id="@+id/resultArea"
         android:layout_width="wrap_content"
